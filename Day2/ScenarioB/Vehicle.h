@@ -2,7 +2,7 @@
 #define VEHICLE_H
 
 #include <iostream>
-#include <VehicleType.h>
+#include "VehicleType.h"
 
 class Vehicle
 {
