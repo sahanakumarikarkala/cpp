@@ -7,6 +7,8 @@ void CreateObjects(Vehicle *container[3])
     container[0] = new Vehicle("v101", "Maruthi", Type::CAR, 870000.0f);
     container[1] = new Vehicle("v102", "Honda", Type::BIKE, 970000.0f);
     container[2] = new Vehicle("v103", "Yamaha", Type::OTHER, 1270000.0f);
+
+    std::cout <<*container[1];
 }
 
 float AveragePrice(Vehicle *container[3])

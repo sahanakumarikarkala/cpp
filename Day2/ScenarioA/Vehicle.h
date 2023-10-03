@@ -53,6 +53,15 @@ public:
 
     Type type() const { return _type; }
     void setType(const Type &type) { _type = type; }
+
+    friend std::ostream &operator<<(std::ostream &os, const Vehicle &rhs) {
+        os << "_id: " << rhs._id
+           << " _brand: " << rhs._brand
+           << " _price: " << rhs._price;
+        return os;
+    }
+
+    
 };
 
 #endif // VEHICLE_H
