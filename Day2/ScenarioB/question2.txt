@@ -1,0 +1,30 @@
+
+create class Vehicle with following
+
+_id which is an alphanumeric string
+_brand which is a string
+_type which is either CAR,BIKE or OTHER
+_price which is a float value
+create a constructor
+create  a constructor without price
+copy constructor to copy object
+- calculateTax whose implmentation might change in each child but signature is " takes no parameter , return float"
+
+
+
+create class Car  with the following attributes 
+- _type which could be SEDAN, SUV,HATBACK
+- claculateTax ehose implmentation is " return 10% of _price"
+functionalities-
+function to create the 3 objects on heap
+function to find the average price of all object
+
+demonstrate in functionalities in Main.cpp
+
+
+
+
+/*
+
+We want 
+*/
