@@ -1,0 +1,13 @@
+/*
+We want to create objects of multiple classes (Which are part of inheritence heirarchy)
+We would like to store all objects in the same controller
+all classes in the heirarchy have common functionality(usually declared in parent class)
+*/
+
+...
+...
+
+Create class Bike with the following attributres
+
+- _bike_mileage which is a float value,
+- _bike_type is either COMMUTE, SPORTS , ATV
