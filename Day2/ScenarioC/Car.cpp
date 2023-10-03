@@ -10,6 +10,28 @@ Car::Car(std::string id, std::string brand, VehicleType type, CarType cType)
 {
 }
 
+std::ostream &operator<<(std::ostream &os, const Car &rhs) {
+    os << static_cast<const Vehicle &>(rhs)
+       << " _car_type: " << DisplayEnum(rhs._car_type);
+    return os;
+}
+
+std::string DisplayEnum(const CarType val)
+{
+    if (val==CarType::SUV)
+    {
+        return "SUV";
+        /* code */
+    }
+    else if(val==CarType::SEDAN){
+        return "SEDAN";
+    }
+    else{
+        return "HATCHBACK";
+    }
+    
+}
+
 float Car::CalculateTax()
 {
     return 0.1f * price();

@@ -40,9 +40,13 @@ public:
 
     VehicleType type() const { return _type; }
 
-   
+    friend std::ostream &operator<<(std::ostream &os, const Vehicle &rhs);
 
     
 };
 
+
+//It takes one enum vakue and prints its string form
+// Based on the logiv written inside the bosy
+std::string DisplayEnum(const VehicleType value);
 #endif // VEHICLE_H
