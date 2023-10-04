@@ -47,5 +47,5 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp"
     },
-    "gitdoc.enabled": true
+    "gitdoc.enabled": false
 }
