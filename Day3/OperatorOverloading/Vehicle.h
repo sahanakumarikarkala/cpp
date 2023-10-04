@@ -38,6 +38,7 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const Vehicle &rhs);
 
     // e1+e2
+    // hello world
     // OPERATOR OVERLOADING
     float operator+(Vehicle e2)
     {
