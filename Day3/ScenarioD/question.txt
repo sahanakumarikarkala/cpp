@@ -1,0 +1,8 @@
+...
+...
+
+- a function CalculateTax which will take 1 parameter
+- It returns parameter times price
+- A function CalculateTx that takes 0 paramters abd return 18% of the tax
+
+- A function calculateTax  that takes 2 parameters (cgst and sgst float values). It returns cgst times price plus gst(sgst times price *3) as answer
