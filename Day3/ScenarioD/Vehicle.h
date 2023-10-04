@@ -12,7 +12,8 @@ private:
     VehicleType _type;
 
 public:
-    Vehicle() = delete; // disabled default constructor
+    // Vehicle() = delete; // disabled default constructor
+    Vehicle(std::string id, std::string brand, float price, VehicleType type);
     Vehicle(const Vehicle &) = default;
     Vehicle(/* args */)
     {
@@ -21,7 +22,6 @@ public:
             << _id
             << " is destroyed\n";
     }
-    Vehicle(std::string id, std::string brand, float price, VehicleType type);
     float CalculateTax();
     float CalculateTax(float tax_percent);
     float CalculateTax(float sgst, float cgst);
@@ -36,7 +36,6 @@ public:
     VehicleType type() const { return _type; }
 
     friend std::ostream &operator<<(std::ostream &os, const Vehicle &rhs);
-    
 };
 
 std::string DisplayEnum(const VehicleType value);

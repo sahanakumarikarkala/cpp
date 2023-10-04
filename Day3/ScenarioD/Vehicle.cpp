@@ -1,26 +1,27 @@
 #include "Vehicle.h"
 
 Vehicle::Vehicle(std::string id, std::string brand, float price, VehicleType type)
-: _id(id),_brand(brand),_price(price),_type(type)
+    : _id(id), _brand(brand), _price(price), _type(type)
 {
 }
 
 float Vehicle::CalculateTax()
 {
-    return 0.0f;
+    return 0.18f * _price;
 }
 
 float Vehicle::CalculateTax(float tax_percent)
 {
-    return 0.0f;
+    return tax_percent * _price;
 }
 
-float Vehicle::CalculateTax(float sgst, float cgst)
+float Vehicle::CalculateTax(float cgst, float sgst)
 {
-    return 0.0f;
+    return (cgst * _price) + (sgst * _price * 3);
 }
 
-std::ostream &operator<<(std::ostream &os, const Vehicle &rhs) {
+std::ostream &operator<<(std::ostream &os, const Vehicle &rhs)
+{
     os << "_id: " << rhs._id
        << " _brand: " << rhs._brand
        << " _price: " << rhs._price
@@ -42,5 +43,4 @@ std::string DisplayEnum(const VehicleType value)
     {
         return "OTHER";
     }
-    
 }
