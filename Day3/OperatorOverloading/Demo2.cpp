@@ -20,6 +20,8 @@ public:
         Complex temp(r, i);
         return temp;
     }
+    // friend fuctions is a function that is not a member function of the class 
+    // but still has access to private attributes of the class
     friend std::ostream& operator<<(std::ostream& os, const Complex& c)
     {
         os << c._real << " + " << c._imag << "i";
