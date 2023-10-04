@@ -36,6 +36,10 @@ public:
     VehicleType type() const { return _type; }
 
     friend std::ostream &operator<<(std::ostream &os, const Vehicle &rhs);
+    // friend std::ostream& operator<<(std::ostream& os,Vehicle& obj){
+    //     os<<"ID : "<<obj._id<<"\t"<<"Brand : "<<obj._brand<<"\t"<<"Price : "<<obj._price<<"\t"<<"Type : "<<DisplayEnum(obj._type);
+    //     return os
+    // };
 
     // e1+e2
     // hello world

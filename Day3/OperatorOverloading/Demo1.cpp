@@ -10,5 +10,5 @@ int main()
     std::cout << "v1 + v2 = " << v1 + v2 << std::endl;
     Vehicle *v3 = new Vehicle("3", "Honda", 300000.0f, VehicleType::CAR);
     Vehicle *v4 = new Vehicle("4", "Honda", 400000.0f, VehicleType::CAR);
-    std::cout << "v1 + v3 = " << *v4 + *v3 << std::endl;
+    std::cout << "v1 + v3 = " << *v4 + *v3  << std::endl;
 }
