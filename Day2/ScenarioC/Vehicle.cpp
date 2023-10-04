@@ -17,6 +17,7 @@ std::ostream &operator<<(std::ostream &os, const Vehicle &rhs)
        << " _price: " << rhs._price
        << " _type: " << DisplayEnum(rhs._type);
     return os;
+    
 }
 
 std::string DisplayEnum(const VehicleType value)
