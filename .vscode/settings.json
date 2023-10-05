@@ -45,7 +45,9 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "cinttypes": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "list": "cpp"
     },
-    "gitdoc.enabled": false
+    "gitdoc.enabled": false,
+    "C_Cpp.errorSquiggles": "enabled"
 }
