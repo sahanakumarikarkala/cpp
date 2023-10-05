@@ -49,5 +49,6 @@
         "list": "cpp"
     },
     "gitdoc.enabled": false,
-    "C_Cpp.errorSquiggles": "enabled"
+    "C_Cpp.errorSquiggles": "enabled",
+    "cmake.sourceDirectory": "/workspaces/cpp/Day4/Templates"
 }
