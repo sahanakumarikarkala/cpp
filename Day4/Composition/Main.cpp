@@ -3,10 +3,10 @@
 #include "Employee.h"
 #include "Project.h"
 #include "Department.h"
-
+#define SIZE 3
 int main(){
-    Employee *emps[3];
-    Project *projects[3];
+    Employee *emps[SIZE]={};
+    // Project *projects[SIZE]={};
     CreateProjectsAndEmployees(emps);
     std::cout << "Employee with highest salary is : " << *HighestSalary(emps) << std::endl;
     std::cout << "Number of employees in Development department is : " << DepartmentByName(emps,Department::DEVELOPMENT) << std::endl;

@@ -63,3 +63,16 @@ void FreeMemory(Employee *emps[3])
         delete emps[i];
     }
 }
+
+
+bool CheckNull(Employee *emps[3])
+{
+    for (int i = 0; i < 3; i++)
+    {
+        if (emps[i] != nullptr)
+        {
+            return false;
+        }
+    }
+    return true;
+}

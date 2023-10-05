@@ -3,23 +3,13 @@
 
 #include "Employee.h"
 #include "Project.h"
-
+#define SIZE 3;
 /*
     A function to check if all positions of the array are nullptr
 */
 
-bool CheckNull(Employee *emps[3])
-{
-    for (int i = 0; i < 3; i++)
-    {
-        if (emps[i] != nullptr)
-        {
-            return false;
-        }
-    }
-    return true;
-}
 
+bool CheckNull(Employee *emps[3]);
 /*
     A function to create 3 objects of Projects in an array
     Also create 3 objects if Employees in a seperate array .
