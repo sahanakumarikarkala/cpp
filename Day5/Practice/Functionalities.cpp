@@ -7,8 +7,7 @@
 #include "DebitCard.h"
 #include "CreditCard.h"
 
-
-/* 
+/*
     A function to check if all pointers in the container is nullptr
     If all pointers are nullptr, return true
     Else return false
@@ -25,7 +24,6 @@ bool isEmpty(Card *cards[5])
     return true;
 }
 
-
 /* A function  to create objects of type Card and store them in an array of pointers to Card.
  * The function should create 2 objects of type DebitCard and 3 objects of type CreditCard.
  * The function should return the array of pointers to Card.
@@ -38,7 +36,6 @@ void createObjects(Card *cards[5])
     cards[2] = new CreditCard(1236, 125, Issuer::VISA, 300, 3000, 1000);
     cards[3] = new CreditCard(1237, 126, Issuer::MASTERCARD, 400, 4000, 2000);
     cards[4] = new CreditCard(1238, 127, Issuer::VISA, 500, 5000, 3000);
-
 }
 
 /* A function to return array of Card pointers for those Cards whose _issuer matched the second parameter.
@@ -46,7 +43,8 @@ void createObjects(Card *cards[5])
  */
 Card **getCardByIssuer(Card *cards[5], Issuer issuer)
 {
-    if(isEmpty(cards)){
+    if (isEmpty(cards))
+    {
         throw std::runtime_error("Empty container");
     }
     Card **result = new Card *[5];
@@ -62,6 +60,9 @@ Card **getCardByIssuer(Card *cards[5], Issuer issuer)
     return result;
 }
 
+/* A function to return a Card pointer for the Card whose _number matched the second parameter.
+ * The function should return the pointer to Card.
+ */
 Card getCardByNumber(Card *cards[5], int number)
 {
     for (int i = 0; i < 5; i++)
@@ -74,9 +75,13 @@ Card getCardByNumber(Card *cards[5], int number)
     throw std::runtime_error("Card not found");
 }
 
+/* A function to return the highest annual charge among all the Cards.
+ * The function should return the highest annual charge.
+ */
 int getHighestAnnualCharge(Card *cards[5])
 {
-    if(isEmpty(cards)){
+    if (isEmpty(cards))
+    {
         throw std::runtime_error("Empty container");
     }
     int max = 0;
