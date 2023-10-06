@@ -106,7 +106,7 @@ int getHighestAnnualCharge(Card *cards[SIZE])
             card = cards[i];
         }
     }
-    return max;
+    return card->cvvNumber();
 }
 
 void FreeMemory(Card *cards[SIZE])
