@@ -12,9 +12,9 @@
     If all pointers are nullptr, return true
     Else return false
  */
-bool isEmpty(Card *cards[5])
+bool isEmpty(Card *cards[SIZE])
 {
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         if (cards[i] != nullptr)
         {
@@ -28,7 +28,7 @@ bool isEmpty(Card *cards[5])
  * The function should create 2 objects of type DebitCard and 3 objects of type CreditCard.
  * The function should return the array of pointers to Card.
  */
-void createObjects(Card *cards[5])
+void createObjects(Card *cards[SIZE])
 {
     // 2 of DebitCard and 3 of CreditCard
     cards[0] = new DebitCard(1234, 123, Issuer::VISA, 100, 1000, CardCategory::DELUXE);
@@ -41,15 +41,15 @@ void createObjects(Card *cards[5])
 /* A function to return array of Card pointers for those Cards whose _issuer matched the second parameter.
  * The function should return the array of pointers to Card.
  */
-Card **getCardByIssuer(Card *cards[5], Issuer issuer)
+Card **getCardByIssuer(Card *cards[SIZE], Issuer issuer)
 {
     if (isEmpty(cards))
     {
         throw std::runtime_error("Empty container");
     }
-    Card **result = new Card *[5];
+    Card **result = new Card *[SIZE];
     int count = 0;
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         if (cards[i]->issuer() == issuer)
         {
@@ -63,9 +63,9 @@ Card **getCardByIssuer(Card *cards[5], Issuer issuer)
 /* A function to return a Card pointer for the Card whose _number matched the second parameter.
  * The function should return the pointer to Card.
  */
-Card* getCardByNumber(Card *cards[5], int number)
+Card* getCardByNumber(Card *cards[SIZE], int number)
 {
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         if (cards[i]->number() == number)
         {
@@ -78,7 +78,7 @@ Card* getCardByNumber(Card *cards[5], int number)
 /* A function to return the highest annual charge among all the Cards.
  * The function should return the card with highest annual charge.
  */
-Card* getHighestAnnualCharge(Card *cards[5])
+int getHighestAnnualCharge(Card *cards[SIZE])
 {
     if (isEmpty(cards))
     {
@@ -86,7 +86,7 @@ Card* getHighestAnnualCharge(Card *cards[5])
     }
     int max = 0;
     Card* card;
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         if (cards[i]->annualCharge() > max)
         {
@@ -94,12 +94,12 @@ Card* getHighestAnnualCharge(Card *cards[5])
             card =  cards[i];
         }
     }
-    return card;
+    return max;
 }
 
-void FreeMemory(Card *cards[5])
+void FreeMemory(Card *cards[SIZE])
 {
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         delete cards[i];
     }

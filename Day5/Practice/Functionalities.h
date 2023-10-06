@@ -1,14 +1,15 @@
 #ifndef FUNCTIONALITIES_H
 #define FUNCTIONALITIES_H
 #include "Card.h"
-void createObjects(Card* cards[5]);
+#define SIZE 5
+void createObjects(Card* cards[SIZE]);
 
-Card** getCardByIssuer(Card* cards[5], Issuer issuer);
+Card** getCardByIssuer(Card* cards[SIZE], Issuer issuer);
 
-Card* getCardByNumber(Card* cards[5], int number);
+Card* getCardByNumber(Card* cards[SIZE], int number);
 
-Card* getHighestAnnualCharge(Card* cards[5]);
+int getHighestAnnualCharge(Card* cards[SIZE]);
 
-void FreeMemory(Card* cards[5]);
+void FreeMemory(Card* cards[SIZE]);
 
 #endif // FUNCTIONALITIES_H
