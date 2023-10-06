@@ -1,5 +1,10 @@
 #include "CreditCard.h"
 
+int CreditCard::operator+(const Card &rhs)
+{
+    return limit() + rhs.limit();
+}
+
 CreditCard::CreditCard(int number, int cvv_number, Issuer issuer, float annual_charge, float limit, float transaction_limit)
     : Card(number, cvv_number, issuer, annual_charge, limit), _transaction_limit(transaction_limit)
 {

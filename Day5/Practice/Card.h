@@ -12,6 +12,7 @@ private:
     float _limit;
 
 public:
+    
     virtual float CalculateTaxOnCharge() = 0;
     Card(int number, int cvv_number, Issuer issuer, float annual_charge, float limit);
 

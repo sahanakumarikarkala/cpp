@@ -1,5 +1,6 @@
 #include "Card.h"
 #include <iostream>
+
 float Card::CalculateTaxOnCharge()
 {
     return 0.0f;

@@ -9,6 +9,7 @@ private:
     float _transaction_limit;
 
 public:
+    int operator+(const Card &rhs);
     CreditCard(int number, int cvv_number, Issuer issuer, float annual_charge, float limit, float transaction_limit);
     float CalculateTaxOnCharge() override;
     ~CreditCard()
