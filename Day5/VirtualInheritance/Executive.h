@@ -28,7 +28,7 @@ public:
 };
 
 inline std::ostream &operator<<(std::ostream &os, const Executive &rhs) {
-    os << static_cast<const Employee &>(rhs)
+    os
        << " _location: " << rhs._location;
     return os;
 }

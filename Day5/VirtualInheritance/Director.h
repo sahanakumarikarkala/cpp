@@ -29,7 +29,7 @@ public:
 };
 
 inline std::ostream &operator<<(std::ostream &os, const Director &rhs) {
-    os << static_cast<const Manager &>(rhs)
+    os << static_cast<const Employee &>(rhs)
     << static_cast<const Manager &>(rhs)
        << static_cast<const Executive &>(rhs)
        << " _budget: " << rhs._budget;

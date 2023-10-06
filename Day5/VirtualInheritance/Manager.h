@@ -8,27 +8,30 @@ class Manager : virtual public Employee
 {
 private:
     int _size;
+
 public:
-    Manager(std::string id, std::string name, int size) 
-     : Employee(id, name), _size(size) {};
+    Manager(std::string id, std::string name, int size)
+        : Employee(id, name), _size(size){};
 
     Manager(int size) : _size(size){};
-    virtual ~Manager() {
-        std::cout<<"Manager Destroyed\n";
+    virtual ~Manager()
+    {
+        std::cout << "Manager Destroyed\n";
     }
-    void CalculateTax() override{
+    void CalculateTax() override
+    {
         std::cout << "Manager tax" << std::endl;
     };
 
     int size() const { return _size; }
 
     friend std::ostream &operator<<(std::ostream &os, const Manager &rhs);
-    
 };
 
-inline std::ostream &operator<<(std::ostream &os, const Manager &rhs) {
-    os << static_cast<const Employee &>(rhs)
-       << " _size: " << rhs._size;
+inline std::ostream &operator<<(std::ostream &os, const Manager &rhs)
+{
+    os
+        << " _size: " << rhs._size;
     return os;
 }
 
