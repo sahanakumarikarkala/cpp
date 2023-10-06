@@ -78,21 +78,23 @@ Card* getCardByNumber(Card *cards[5], int number)
 /* A function to return the highest annual charge among all the Cards.
  * The function should return the highest annual charge.
  */
-int getHighestAnnualCharge(Card *cards[5])
+Card* getHighestAnnualCharge(Card *cards[5])
 {
     if (isEmpty(cards))
     {
         throw std::runtime_error("Empty container");
     }
     int max = 0;
+    Card* card;
     for (int i = 0; i < 5; i++)
     {
         if (cards[i]->annualCharge() > max)
         {
             max = cards[i]->annualCharge();
+            card =  cards[i];
         }
     }
-    return max;
+    return card;
 }
 
 void FreeMemory(Card *cards[5])
