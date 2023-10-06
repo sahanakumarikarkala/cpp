@@ -76,7 +76,7 @@ Card* getCardByNumber(Card *cards[5], int number)
 }
 
 /* A function to return the highest annual charge among all the Cards.
- * The function should return the highest annual charge.
+ * The function should return the card with highest annual charge.
  */
 Card* getHighestAnnualCharge(Card *cards[5])
 {
