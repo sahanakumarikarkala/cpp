@@ -6,13 +6,16 @@ class NoMatchingCardException : public std::exception
 {
 private:
     /* data */
+    std::string _msg;
 public:
-    NoMatchingCardException(/* args */) {}
-    char *what()
+    NoMatchingCardException(char* msg) :_msg(msg){}
+    const char* what() const throw()
     {
-        return "No matching card found";
+        return _msg.c_str();
     }
     ~NoMatchingCardException() {}
+
+
 };
 
 #endif // NOMATCHINGCARDEXCEPTION_H

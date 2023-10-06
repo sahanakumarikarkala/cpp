@@ -6,7 +6,7 @@
 #include "Card.h"
 #include "DebitCard.h"
 #include "CreditCard.h"
-
+#include "NoMatchingCardException.h"
 /*
     A function to check if all pointers in the container is nullptr
     If all pointers are nullptr, return true
@@ -76,7 +76,7 @@ Card *getCardByNumber(Card *cards[SIZE], int number)
             return cards[i];
         }
     }
-    throw std::runtime_error("Card not found");
+    throw NoMatchingCardException("No matching card found\n");
 }
 
 /* A function to return the highest annual charge among all the Cards.
