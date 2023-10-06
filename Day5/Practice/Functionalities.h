@@ -4,7 +4,7 @@
 #define SIZE 5
 void createObjects(Card* cards[SIZE]);
 
-Card** getCardByIssuer(Card* cards[SIZE], Issuer issuer);
+Card** getCardByIssuer(Card* cards[SIZE], Issuer issuer,Card** result);
 
 Card* getCardByNumber(Card* cards[SIZE], int number);
 

@@ -41,17 +41,12 @@ void createObjects(Card *cards[SIZE])
 /* A function to return array of Card pointers for those Cards whose _issuer matched the second parameter.
  * The function should return the array of pointers to Card.
  */
-Card **getCardByIssuer(Card *cards[SIZE], Issuer issuer)
+Card **getCardByIssuer(Card *cards[SIZE], Issuer issuer, Card** result)
 {
-    if (isEmpty(cards))
-    {
-        throw std::runtime_error("Empty container");
-    }
-    Card **result = new Card *[SIZE];
     int count = 0;
     for (int i = 0; i < SIZE; i++)
     {
-        if (cards[i] == nullptr)
+        if(cards[i] == nullptr)
         {
             continue;
         }

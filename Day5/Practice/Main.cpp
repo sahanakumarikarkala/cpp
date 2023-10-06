@@ -10,7 +10,8 @@ int main()
 {
     Card *cards[5];
     createObjects(cards);
-    Card **visaCards = getCardByIssuer(cards, Issuer::VISA);
+    Card **result;
+    Card **visaCards = getCardByIssuer(cards, Issuer::VISA,result);
     std::cout << "Visa Cards: "
               << "\n";
     std::cout << "-----------------------"
