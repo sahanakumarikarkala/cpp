@@ -8,8 +8,8 @@ int main()
 {
     Director *e1 = new Director("E100", "John", 10, "New York", 10000);
     e1->CalculateTax();
-    std::cout << *e1;
-    
+    std::cout << *e1<<"\n";
+
     std::cout << "ID from Employee: " << e1->id() << std::endl;
 
     std::cout << "Name from Employee: " << e1->getName() << std::endl;

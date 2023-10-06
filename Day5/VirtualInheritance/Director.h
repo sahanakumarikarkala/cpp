@@ -15,7 +15,7 @@ public:
      : Employee(id, name), Manager(size), Executive(location), _budget(budget) {};
 
     void CalculateTax() override{
-        std::cout << "Director tax" << std::endl;
+        std::cout << "Director tax\n" << std::endl;
     }
     ~Director() {
         std::cout<<"Director Destroyed\n";
