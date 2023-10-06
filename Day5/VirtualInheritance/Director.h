@@ -16,7 +16,9 @@ public:
     void CalculateTax() override{
         std::cout << "Director tax" << std::endl;
     }
-    ~Director() {}
+    ~Director() {
+        std::cout<<"Director Destroyed\n";
+    }
 
     float budget() const { return _budget; }
 
