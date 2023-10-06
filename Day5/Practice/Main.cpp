@@ -27,7 +27,8 @@ int main()
     std::cout << "Highest Annual Charge: " << getHighestAnnualCharge(cards) << "\n";
     std::cout << "-----------------------"
               << "\n";
-    std::cout << "Card by number: " << getCardByNumber(cards, 1235) << "\n";
+    std::cout << "Card by number: " << *getCardByNumber(cards, 1235) << "\n";
     std::cout << "-----------------------"
               << "\n";
+    FreeMemory(cards);
 }

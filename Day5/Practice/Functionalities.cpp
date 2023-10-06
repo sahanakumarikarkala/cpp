@@ -63,13 +63,13 @@ Card **getCardByIssuer(Card *cards[5], Issuer issuer)
 /* A function to return a Card pointer for the Card whose _number matched the second parameter.
  * The function should return the pointer to Card.
  */
-Card getCardByNumber(Card *cards[5], int number)
+Card* getCardByNumber(Card *cards[5], int number)
 {
     for (int i = 0; i < 5; i++)
     {
         if (cards[i]->number() == number)
         {
-            return *cards[i];
+            return cards[i];
         }
     }
     throw std::runtime_error("Card not found");
@@ -93,4 +93,12 @@ int getHighestAnnualCharge(Card *cards[5])
         }
     }
     return max;
+}
+
+void FreeMemory(Card *cards[5])
+{
+    for (int i = 0; i < 5; i++)
+    {
+        delete cards[i];
+    }
 }

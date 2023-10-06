@@ -11,7 +11,10 @@ private:
 public:
     CreditCard(int number, int cvv_number, Issuer issuer, float annual_charge, float limit, float transaction_limit);
     float CalculateTaxOnCharge() override;
-    ~CreditCard() {}
+    ~CreditCard()
+    {
+        std::cout << "Credit Card Destroyed";
+    }
 
     float transactionLimit() const { return _transaction_limit; }
 

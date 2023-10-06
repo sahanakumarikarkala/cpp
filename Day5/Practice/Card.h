@@ -10,9 +10,9 @@ private:
     Issuer _issuer;
     float _annual_charge;
     float _limit;
-    virtual float CalculateTaxOnCharge();
 
 public:
+    virtual float CalculateTaxOnCharge() = 0;
     Card(int number, int cvv_number, Issuer issuer, float annual_charge, float limit);
 
     virtual ~Card()

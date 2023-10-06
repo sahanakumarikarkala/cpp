@@ -5,8 +5,10 @@ void createObjects(Card* cards[5]);
 
 Card** getCardByIssuer(Card* cards[5], Issuer issuer);
 
-Card getCardByNumber(Card* cards[5], int number);
+Card* getCardByNumber(Card* cards[5], int number);
 
 int getHighestAnnualCharge(Card* cards[5]);
+
+void FreeMemory(Card* cards[5]);
 
 #endif // FUNCTIONALITIES_H
