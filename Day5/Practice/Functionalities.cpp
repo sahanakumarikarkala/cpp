@@ -96,6 +96,10 @@ int getHighestAnnualCharge(Card *cards[SIZE])
     Card *card;
     for (int i = 0; i < SIZE; i++)
     {
+        if(cards[i] == nullptr)
+        {
+            continue;
+        }
         if (cards[i]->annualCharge() > max)
         {
             max = cards[i]->annualCharge();
