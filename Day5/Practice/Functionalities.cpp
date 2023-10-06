@@ -51,6 +51,10 @@ Card **getCardByIssuer(Card *cards[SIZE], Issuer issuer)
     int count = 0;
     for (int i = 0; i < SIZE; i++)
     {
+        if (cards[i] == nullptr)
+        {
+            continue;
+        }
         if (cards[i]->issuer() == issuer)
         {
             result[count] = cards[i];
@@ -63,10 +67,14 @@ Card **getCardByIssuer(Card *cards[SIZE], Issuer issuer)
 /* A function to return a Card pointer for the Card whose _number matched the second parameter.
  * The function should return the pointer to Card.
  */
-Card* getCardByNumber(Card *cards[SIZE], int number)
+Card *getCardByNumber(Card *cards[SIZE], int number)
 {
     for (int i = 0; i < SIZE; i++)
     {
+        if(cards[i] == nullptr)
+        {
+            continue;
+        }
         if (cards[i]->number() == number)
         {
             return cards[i];
@@ -85,13 +93,13 @@ int getHighestAnnualCharge(Card *cards[SIZE])
         throw std::runtime_error("Empty container");
     }
     int max = 0;
-    Card* card;
+    Card *card;
     for (int i = 0; i < SIZE; i++)
     {
         if (cards[i]->annualCharge() > max)
         {
             max = cards[i]->annualCharge();
-            card =  cards[i];
+            card = cards[i];
         }
     }
     return max;
