@@ -5,7 +5,7 @@
 #include "Executive.h"
 #include "Employee.h"
 #include <ostream>
-class Director : public Manager, public Executive
+class Director : virtual public Manager, virtual public Executive
 {
 private:
     float _budget;
