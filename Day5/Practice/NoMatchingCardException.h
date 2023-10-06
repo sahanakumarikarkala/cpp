@@ -8,6 +8,10 @@ private:
     /* data */
 public:
     NoMatchingCardException(/* args */) {}
+    char *what()
+    {
+        return "No matching card found";
+    }
     ~NoMatchingCardException() {}
 };
 
