@@ -9,6 +9,9 @@ private:
     std::string name;
 
 public:
+
+    Employee() = default;//defaulted default constructor
+    
     Employee(std::string id, std::string name) 
      : _id(id), name(name){};
     virtual void CalculateTax() = 0;

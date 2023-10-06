@@ -11,6 +11,8 @@ private:
 public:
     Manager(std::string id, std::string name, int size) 
      : Employee(id, name), _size(size) {};
+
+    Manager(int size) : _size(size){};
     virtual ~Manager() {
         std::cout<<"Manager Destroyed\n";
     }

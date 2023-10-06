@@ -11,7 +11,8 @@ private:
     float _budget;
 public:
     Director(std::string id, std::string name, int size, std::string location, float budget) 
-     : Employee(id, name), Manager(id, name, size), Executive(id, name, location), _budget(budget) {};
+    //  : Employee(id, name), Manager(id, name, size), Executive(id, name, location), _budget(budget) {};
+     : Employee(id, name), Manager(size), Executive(location), _budget(budget) {};
 
     void CalculateTax() override{
         std::cout << "Director tax" << std::endl;

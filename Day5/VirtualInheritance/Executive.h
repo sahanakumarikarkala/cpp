@@ -11,7 +11,8 @@ private:
 public:
     Executive(std::string id, std::string name, std::string location) 
      : Employee(id, name), _location(location) {};
-    
+    // To avoid the duplicate 
+    Executive(std::string location) : _location(location){};
     void CalculateTax() override{
         std::cout << "Executive tax" << std::endl;
     }
