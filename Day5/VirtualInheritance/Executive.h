@@ -20,6 +20,8 @@ public:
         std::cout<<"Executive Destroyed\n";
     }
 
+    std::string location() const { return _location; }
+
     friend std::ostream &operator<<(std::ostream &os, const Executive &rhs);
     
 };

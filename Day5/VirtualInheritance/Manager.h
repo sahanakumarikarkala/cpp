@@ -18,6 +18,8 @@ public:
         std::cout << "Manager tax" << std::endl;
     };
 
+    int size() const { return _size; }
+
     friend std::ostream &operator<<(std::ostream &os, const Manager &rhs);
     
 };

@@ -16,6 +16,10 @@ public:
         std::cout<<"Employee Destroyed\n";
     }
 
+    std::string id() const { return _id; }
+
+    std::string getName() const { return name; }
+
     friend std::ostream &operator<<(std::ostream &os, const Employee &rhs);
     
 };
