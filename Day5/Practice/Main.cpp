@@ -31,5 +31,10 @@ int main()
     std::cout << "Card by number: " << *getCardByNumber(cards, 1235) << "\n";
     std::cout << "-----------------------"
               << "\n";
+
+    // Example for Adding to 2 debit card
+    CreditCard *creditCard1 = new CreditCard(1239, 128, Issuer::RUPAY, 600, 6000, 4000);
+    CreditCard *creditCard2 = new CreditCard(1240, 129, Issuer::RUPAY, 700, 7000, 5000);
+    std::cout << "Adding to 2 debit card: " << *creditCard1 + *creditCard2 << "\n";
     FreeMemory(cards);
 }
