@@ -33,7 +33,6 @@ void SwitchMenu()
             break;
         case 4:
             exit(0); // Exit with zero errors
-
         default:
             break;
         }
