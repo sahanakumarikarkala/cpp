@@ -41,9 +41,10 @@ void createObjects(Card *cards[SIZE])
 /* A function to return array of Card pointers for those Cards whose _issuer matched the second parameter.
  * The function should return the array of pointers to Card.
  */
-Card **getCardByIssuer(Card *cards[SIZE], Issuer issuer, Card** result)
+Card **getCardByIssuer(Card *cards[SIZE], Issuer issuer)
 {
     int count = 0;
+    Card **result = new Card *[SIZE];
     for (int i = 0; i < SIZE; i++)
     {
         if(cards[i] == nullptr)
