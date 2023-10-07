@@ -19,7 +19,7 @@ public:
     Customer(const Customer &) = default;
 
     ~Customer() {
-        std::cout << "Customer with the id:"<<_id<<"is destroyed\n";
+        std::cout << "Customer with the id: "<<_id<<" is destroyed\n";
     }
 
     std::string name() const { return _name; }

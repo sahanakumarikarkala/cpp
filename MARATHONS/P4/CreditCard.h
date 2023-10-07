@@ -12,7 +12,7 @@ private:
 
 public:
     CreditCard(std::string number, CardType type, float limit, int card_cvv_number);
-    // CreditCard(const CreditCard &other) = delete;
+    
     ~CreditCard() {}
 
     std::string number() const { return _number; }
